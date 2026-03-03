@@ -1,0 +1,30 @@
+<svg width="920" height="260" viewBox="0 0 920 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iqGlow" x1="540" y1="56" x2="780" y2="204" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="0.5" stop-color="#6EA8FF"/>
+      <stop offset="1" stop-color="#8A7CFF"/>
+    </linearGradient>
+    <linearGradient id="core" x1="56" y1="46" x2="206" y2="216" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8A7CFF"/>
+      <stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="920" height="260" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="920" height="260" rx="28" fill="#0B0F1A"/>
+  <g filter="url(#glow)">
+    <path d="M84 54L153 91L84 129V54Z" fill="url(#core)"/>
+    <path d="M153 129L84 166L153 204V129Z" fill="#3B82F6" opacity="0.9"/>
+    <path d="M180 56L225 82V177L180 204V56Z" fill="#E5EDFF" opacity="0.92"/>
+  </g>
+
+  <text x="270" y="156" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="800" font-size="92" letter-spacing="-2">Vistara</text>
+  <text x="665" y="156" fill="url(#iqGlow)" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="900" font-size="92" letter-spacing="-1">IQ</text>
+</svg>

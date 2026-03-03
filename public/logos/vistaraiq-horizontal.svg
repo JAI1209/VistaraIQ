@@ -1,0 +1,13 @@
+<svg width="760" height="180" viewBox="0 0 760 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hIQ" x1="540" y1="40" x2="690" y2="136" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#8A7CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="180" rx="20" fill="#0B0F1A"/>
+  <path d="M56 37L112 66L56 95V37Z" fill="#6EA8FF"/>
+  <path d="M112 95L56 124L112 153V95Z" fill="#3B82F6"/>
+  <text x="150" y="115" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="800" font-size="74" letter-spacing="-1.4">Vistara</text>
+  <text x="515" y="115" fill="url(#hIQ)" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="900" font-size="74">IQ</text>
+</svg>

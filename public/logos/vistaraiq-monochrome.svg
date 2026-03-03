@@ -1,0 +1,6 @@
+<svg width="640" height="160" viewBox="0 0 640 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="160" rx="18" fill="#0B0F1A"/>
+  <path d="M44 36L96 62L44 88V36Z" fill="#FFFFFF"/>
+  <path d="M96 88L44 114L96 130V88Z" fill="#FFFFFF" opacity="0.8"/>
+  <text x="128" y="104" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="800" font-size="66" letter-spacing="-1">VistaraIQ</text>
+</svg>
