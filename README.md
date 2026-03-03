@@ -28,6 +28,19 @@ VistaraIQ is designed to help founders and teams expand intelligently by turning
   - dashboard layout + overview stats
   - premium logo system (horizontal, icon-only, monochrome, favicon-ready)
 
+## Role of AI in VistaraIQ
+
+AI is the decision-intelligence layer of VistaraIQ.
+
+Instead of being used as a chat-only feature, AI is integrated into the product workflow through the Investor Engine:
+
+- Generates an **Executive Summary** from blueprint context
+- Produces an **ROI Forecast** for planning scenarios
+- Creates a **Risk Assessment** to surface key execution concerns
+- Builds a **Funding Breakdown** to support investment discussions
+
+This allows teams to move from raw ideas to structured, investor-ready insights faster and with better clarity.
+
 ## Tech Stack
 
 - Next.js 15 (App Router)
