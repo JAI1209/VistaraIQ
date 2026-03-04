@@ -1,17 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { FormEvent, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 
 export default function LoginPage() {
   const router = useRouter();
-  const searchParams = useSearchParams();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(searchParams.get("error") === "oauth_not_configured" ? "OAuth is not configured yet." : "");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("error") === "oauth_not_configured") {
+      setError("OAuth is not configured yet.");
+    }
+  }, []);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -25,10 +31,16 @@ export default function LoginPage() {
         body: JSON.stringify({ email, password }),
       });
 
-      const data = (await res.json().catch(() => null)) as { error?: string } | null;
+      const data = (await res.json().catch(() => null)) as
+        | { error?: string; token?: string }
+        | null;
       if (!res.ok) {
         setError(data?.error ?? "Login failed");
         return;
+      }
+
+      if (data?.token) {
+        localStorage.setItem("vistara_token", data.token);
       }
 
       router.replace("/dashboard");
@@ -122,6 +134,13 @@ export default function LoginPage() {
             Sign in with GitHub
           </a>
         </div>
+
+        <Link
+          href="/dashboard?explore=1"
+          className="mt-4 block rounded-xl border border-blue-400/40 bg-blue-500/10 px-4 py-2.5 text-center text-sm font-medium text-blue-200 transition hover:border-blue-300 hover:text-white"
+        >
+          Explore Dashboard
+        </Link>
       </section>
     </main>
   );

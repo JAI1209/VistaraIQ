@@ -2,7 +2,12 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 
-const navItems = ["Overview", "Blueprints", "Analytics", "Settings"];
+const navItems = [
+  { label: "Overview", href: "/dashboard?tab=overview" },
+  { label: "Blueprints", href: "/dashboard?tab=blueprints" },
+  { label: "Analytics", href: "/dashboard?tab=analytics" },
+  { label: "Settings", href: "/dashboard?tab=settings" },
+];
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
@@ -12,13 +17,13 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           <Logo size="md" />
 
           <nav className="mt-10 space-y-2">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <Link
-                key={item}
-                href={index === 0 ? "/dashboard" : "#"}
+                key={item.label}
+                href={item.href}
                 className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white"
               >
-                {item}
+                {item.label}
               </Link>
             ))}
           </nav>

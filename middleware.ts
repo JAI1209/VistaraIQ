@@ -5,10 +5,24 @@ const secret = new TextEncoder().encode(process.env.JWT_SECRET || "");
 
 export async function middleware(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
+  const exploreCookie = req.cookies.get("explore_dashboard")?.value;
   const { pathname } = req.nextUrl;
+  const exploreMode = req.nextUrl.searchParams.get("explore") === "1";
 
   if (!pathname.startsWith("/dashboard")) {
     return NextResponse.next();
+  }
+
+  if (exploreMode || exploreCookie === "1") {
+    const response = NextResponse.next();
+    if (exploreMode) {
+      response.cookies.set("explore_dashboard", "1", {
+        httpOnly: true,
+        sameSite: "lax",
+        path: "/",
+      });
+    }
+    return response;
   }
 
   if (!token) {
