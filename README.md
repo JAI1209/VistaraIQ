@@ -2,6 +2,19 @@
 
 VistaraIQ is a SaaS platform for creating, managing, and analyzing business blueprints with secure authentication, role-aware APIs, and an investor insights engine.
 
+## About The Project
+
+VistaraIQ helps founders, operators, and product teams turn early ideas into structured business blueprints and continuously improve them with AI-assisted feedback.
+
+The platform now includes:
+
+- Full blueprint workspace in dashboard (create, select, edit, save, delete)
+- Explore mode (no-login product walkthrough) for quick demo and testing
+- Threaded AI assistant with per-blueprint chat history
+- One-click "apply assistant notes" into blueprint draft content
+- Analytics snapshots based on blueprint freshness and content depth
+- Secure auth flows with route protection and role-aware APIs
+
 ## Product Vision
 
 - **Vistara** = expansion/growth
@@ -15,8 +28,11 @@ VistaraIQ is designed to help founders and teams expand intelligently by turning
 - Email/password registration and login
 - Role model (`ADMIN`, `USER`, `HOSTER`)
 - Protected dashboard routes with middleware JWT verification
+- Explore dashboard access option for product preview (`/dashboard?explore=1`)
 - Blueprint CRUD with ownership validation
 - Automatic version snapshots on blueprint updates
+- Interactive dashboard sections: Overview, Blueprints, Analytics, Settings
+- Threaded AI chat per blueprint with local persistence in browser storage
 - Investor engine endpoint for:
   - executive summary
   - ROI forecast
@@ -25,7 +41,7 @@ VistaraIQ is designed to help founders and teams expand intelligently by turning
 - Modern SaaS frontend:
   - cinematic splash screen
   - login/register UI
-  - dashboard layout + overview stats
+  - actionable dashboard workspace + overview stats
   - premium logo system (horizontal, icon-only, monochrome, favicon-ready)
 
 ## Role of AI in VistaraIQ
