@@ -1,4 +1,6 @@
+<img width="1917" height="917" alt="image" src="https://github.com/user-attachments/assets/9d9c1cf3-5816-4155-bac3-1fb0c48003dc" />
 # VistaraIQ
+<img width="1918" height="913" alt="image" src="https://github.com/user-attachments/assets/3ee7256b-7deb-4b93-a6ae-4a94f7e5d118" />
 
 VistaraIQ is a SaaS platform for creating, managing, and analyzing business blueprints with secure authentication, role-aware APIs, and an investor insights engine.
 
