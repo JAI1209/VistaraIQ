@@ -4,7 +4,7 @@
 
 VistaraIQ is a SaaS platform for creating, managing, and analyzing business blueprints with secure authentication, role-aware APIs, and an investor insights engine.
 
-## About The Project
+## About The Project.
 
 VistaraIQ helps founders, operators, and product teams turn early ideas into structured business blueprints and continuously improve them with AI-assisted feedback.
 
